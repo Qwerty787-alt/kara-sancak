@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b2a3d" />
+    <title>Kara Sancak Deneme</title>
+    <script type="module" crossorigin src="./assets/oyun.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index.css">
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+    <canvas id="overlay"></canvas>
+    <div id="hud">
+      <div id="me" class="panel">
+        <div class="row"><span class="name">Gemin</span><span class="muted" id="me-class">Brik</span></div>
+        <div class="bar"><div class="fill" id="me-hp"></div><span class="bar-text" id="me-hp-text"></span></div>
+        <div class="muted small" id="score">Batırdığın 0 · Battığın 0</div>
+      </div>
+
+      <div id="target" class="panel hidden">
+        <div class="row">
+          <span class="name" id="target-name"></span>
+          <button id="target-clear" class="icon" aria-label="Hedefi bırak">×</button>
+        </div>
+        <div class="bar enemy"><div class="fill" id="target-hp"></div><span class="bar-text" id="target-hp-text"></span></div>
+        <div class="muted small" id="target-info"></div>
+      </div>
+
+      <canvas id="minimap" width="150" height="150"></canvas>
+
+      <div id="bottom">
+        <div class="side" id="side-port">
+          <div class="label">Sol borda</div>
+          <div class="rbar"><div class="fill"></div></div>
+        </div>
+        <div id="ammo"></div>
+        <div class="side" id="side-starboard">
+          <div class="label">Sağ borda</div>
+          <div class="rbar"><div class="fill"></div></div>
+        </div>
+      </div>
+
+      <div id="toast" class="hidden"></div>
+
+      <div id="help">
+        <div class="help-box">
+          <h1>Kara Sancak</h1>
+          <p class="muted">Küçük deneme · tek harita, iki gemi</p>
+          <ul>
+            <li><b>Gitmek için</b> denize dokun (basılı tutup sürükleyebilirsin).</li>
+            <li><b>Hedef seçmek için</b> kırmızı yelkenli gemiye dokun.</li>
+            <li>Toplar <b>gemi yan dönünce</b> kendiliğinden atar. Sol ve sağ borda ayrı dolar.</li>
+            <li>Gülleyi alttan seç: <b>Çelik</b> düz, <b>Kızgın</b> yakar, <b>Direk Kıran</b> yavaşlatır.</li>
+            <li><b>Yakınlaştırmak için</b> tekerlek ya da iki parmak.</li>
+          </ul>
+          <button id="start">Denize aç</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
