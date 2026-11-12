@@ -29,7 +29,15 @@
         <div class="muted small" id="target-info"></div>
       </div>
 
-      <canvas id="minimap" width="150" height="150"></canvas>
+      <div id="miniHarita" class="miniHarita">
+        <canvas id="miniTuval" width="352" height="352" aria-label="Küçük harita"></canvas>
+      </div>
+      <ul id="miniAciklama" class="panel miniAciklama" aria-label="Küçük harita açıklaması">
+        <li><i class="ok"></i>Sen</li>
+        <li><i style="background: #ff5a48"></i>Korsan</li>
+        <li><i class="capa">⚓</i>Liman</li>
+        <li><i class="kare"></i>Ekran</li>
+      </ul>
 
       <div id="bottom">
         <div class="side" id="side-port">
